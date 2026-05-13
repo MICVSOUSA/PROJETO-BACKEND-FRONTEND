@@ -6,7 +6,7 @@ export const CriarGrupo = ({ onBack }: { onBack: () => void }) => {
         e.preventDefault();
         const token = localStorage.getItem("token");
         const formData = new FormData(e.currentTarget);
-        if (file) {
+        if (file) { 
             formData.append("coverImage", file);
         }
         const res = await fetch("http://localhost:3000/api/groups", {
